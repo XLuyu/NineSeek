@@ -53,8 +53,8 @@ def show_result(scores):
     
 if st.button("评估", type="primary", width='stretch'):
     kvs = {**D1_data, **D2_data, **D3_data, **D4_data, **D5_data, **D6_data}
-    st.write(kvs)
-    DB_utils.record(kvs)
+    # st.write(kvs)
+    # DB_utils.record(kvs)
     show_result(scores)
 
 df = DB_utils.query("SELECT * FROM proj", ttl=0)
