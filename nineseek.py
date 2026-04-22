@@ -53,7 +53,7 @@ def show_result(scores):
     
 if st.button("评估", type="primary", width='stretch'):
     kvs = {**D1_data, **D2_data, **D3_data, **D4_data, **D5_data, **D6_data}
-    # st.write(kvs)
+    st.write(kvs)
     DB_utils.record(kvs)
     show_result(scores)
 
